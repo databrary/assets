@@ -1,6 +1,7 @@
 body {
 	font-size: 16px;
 	overflow: hidden;
+	font-family: verdana, sans-serif;
 }
 
 article {
@@ -18,7 +19,7 @@ article {
 	top: 0;
 	bottom: 0;
 	right: 0;
-	width: 200px;
+	left: 960px;
 	font-size: 12px;
 	background-color: #fafafa;
 	padding: 5px;
@@ -29,10 +30,148 @@ article {
 	top: 0;
 	bottom: 0;
 	left: 0;
-	right: 200px;
+	width: 960px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
 
+/**/
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+.buttons {
+	margin-bottom: 10px;
+}
+
 /************************************/
+
+.player {
+	width: 100%;
+	padding-bottom: 60%;
+	height: 0;
+	background-color: #ffc;
+	position: relative;
+}
+
+/**/
+
+.player-view {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+
+.player-view.active {
+	display: block;
+}
+
+.player-view-main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #000;
+}
+
+#player-view-1 .player-view-main,
+#player-view-2 .player-view-main,
+#player-view-3 .player-view-main {
+	right: 0;
+}
+
+#player-view-4 .player-view-main {
+	right: 140px;
+}
+
+.player-view-side {
+	background-color: #666;
+	padding: 10px;
+	position: absolute;
+}
+
+#player-view-2 .player-view-side {
+	bottom: 20px;
+	right: 20px;
+}
+
+#player-view-3 .player-view-side {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+}
+
+#player-view-4 .player-view-side {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	float: right;
+}
+
+/**/
+
+.video {
+	background-color: #fcc;
+	background-size: 50px 50px;
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	padding: 10px;
+}
+
+.video-2 {
+	background-color: #beb;
+}
+
+.video-3 {
+	background-color: #ccf;
+}
+
+.video-4 {
+	background-color: #eea;
+}
+
+#player-view-1 .player-view-main .video,
+#player-view-2 .player-view-main .video,
+#player-view-4 .player-view-main .video {
+	height: calc(100% - 19px);
+}
+
+#player-view-3 .player-view-main .video {
+	height: calc(100% - 79px);
+	margin: 0 70px;
+}
+
+.player-view-side .video {
+	height: 60px;
+	width: 100px;
+}
+
+#player-view-3 .player-view-side .video {
+	float: left;
+}
+
+#player-view-3 .player-view-side .video + .video {
+	margin-left: 10px;
+}
+
+#player-view-4 .player-view-side .video + .video {
+	margin-top: 10px;
+}
+
+.video-id {
+	margin: 0 auto;
+	border-radius: 1000px;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .8);
+	width: 20px;
+	height: 20px;
+}
+
+/**/
 
