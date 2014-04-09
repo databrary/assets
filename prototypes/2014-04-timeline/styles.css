@@ -35,6 +35,10 @@ article {
 	overflow-y: scroll;
 }
 
+.typcn {
+	font-size: 24px;
+}
+
 /**/
 
 label {
@@ -173,5 +177,163 @@ label {
 	height: 20px;
 }
 
+/************************************/
+
+.seekbar {
+	width: 100%;
+	height: 5px;
+	background: black;
+	position: relative;
+}
+
+.seekbar-loaded,
+.seekbar-segment {
+	position: absolute;
+	height: 5px;
+}
+
+.seekbar-loaded {
+	background-color: white;
+}
+
+.seekbar-segment {
+	background-color: rgba(255, 255, 0, .5);
+}
+
+.seekbar-now {
+	position: absolute;
+	top: -1px;
+	height: 5px;
+	width: 2px;
+	left: 0;
+	background-color: #9c9;
+	border-radius: 5px;
+	border: 1px solid #696;
+}
+
+/************************************/
+
+.toolbar {
+	height: 30px;
+	background-color: #ccc;
+	background: linear-gradient(to bottom, #ddd 0%, #bbb 100%);
+	padding: 5px;
+}
+
+.toolbar-icon {
+	height: 28px;
+	width: 28px;
+	border-radius: 5px;
+	border: 1px solid rgba(127,127,127,.5);
+	margin-right: 5px;
+	float: left;
+}
+
+.toolbar-icon:before {
+	position: relative;
+	top: -3px;
+	left: 2px;
+}
+
+.toolbar-icon:hover {
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.toolbar-icon:active {
+	background-color: rgba(255, 255, 255, .75);
+}
+
+.toolbar-sep {
+	float: left;
+	border: 1px solid rgba(127,127,127,.5);
+	border-radius: 5px;
+	height: 24px;
+	width: 0;
+	margin-top: 2px;
+}
+
+/**********************************/
+
+.timeline {
+
+}
+
+.ruler {
+	height: 50px;
+	background: white url('ruler-top.png') repeat-x 1px 2px;
+	box-shadow: 0 0 5px black;
+	position: relative;
+	z-index: 1000;
+}
+
+.ruler-minute {
+	float: left;
+	width: 77px;
+	font-size: 10px;
+	color: #333;
+	opacity: .5;
+	padding-left: 3px;
+}
+
+.ruler-minute:last-of-type {
+	width: 20px;
+}
+
+.alternator {
+	background: url('ruler-thru.png') 1px;
+}
+
 /**/
 
+.tracks,
+.commbar {
+	background-color: rgba(255, 255, 255, .5);
+	min-height: 100px;
+}
+
+/**/
+
+.track {
+	border-top: 1px solid white;
+	border-bottom: 1px solid #999;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.file {
+	border-radius: 1px;
+	border: 1px solid #c9c;
+	background: #fef;
+	padding: 2px 4px;
+}
+
+.file-1 {
+	margin-left: 1px;
+	margin-right: 500px;
+}
+
+.file-2 {
+	margin-left: 58px;
+	margin-right: 300px;
+}
+
+.file-3 {
+	margin-left: 435px;
+	margin-right: 1px;
+}
+
+.file-4 {
+	margin-left: 257px;
+	margin-right: 120px;
+}
+
+.file-5 {
+	margin-left: 57px;
+	margin-right: 90px;
+	border: 1px solid #9cc;
+	background: #eff;
+}
+
+.file-classification {
+	font-size: 14px;
+}

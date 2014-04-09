@@ -3,6 +3,7 @@
 	<head>
 		<title>Timeline/Player Prototype</title>
 		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="typicons.min.css">
 		<link rel="stylesheet" href="styles.css">
 		<script src="jquery-2.1.0.min.js"></script>
 		<script src="scripts.js"></script>
@@ -11,12 +12,24 @@
 	<body>
 		<article>
 			<section class="pane-note">
-				<div class="buttons set-player">
-					<label>Player</label>
+				<div class="buttons">
+					<label># of videos</label>
 					<button class="set-player" data-toggle="#player-view-1">1</button>
 					<button class="set-player" data-toggle="#player-view-2">2</button>
 					<button class="set-player" data-toggle="#player-view-3">3</button>
 					<button class="set-player" data-toggle="#player-view-4">4</button>
+				</div>
+
+				<div class="buttons">
+					<label>Load</label>
+					<button class="set-load" data-toggle="load-all">all</button>
+					<button class="set-load" data-toggle="load-segment">segment</button>
+				</div>
+
+				<div class="buttons">
+					<label>Play</label>
+					<button class="set-play" data-toggle="play-all">all</button>
+					<button class="set-play" data-toggle="play-segment">segment</button>
 				</div>
 			</section>
 
@@ -89,34 +102,92 @@
 					</div>
 				</div>
 
-				<div class="toolbar">
-
-				</div>
-
 				<div class="seekbar">
-
+					<div class="seekbar-loaded"></div>
+					<div class="seekbar-segment"></div>
+					<div class="seekbar-now"></div>
 				</div>
 
-				<div class="timeline">
-					<div class="ruler">
-
+				<div class="toolbar">
+					<div class="toolbar-group">
+						<div class="toolbar-icon typcn typcn-media-rewind"></div>
+						<div class="toolbar-icon typcn typcn-media-play"></div>
+						<div class="toolbar-icon typcn typcn-media-fast-forward"></div>
 					</div>
 
-					<div class="tracks">
+					<div class="toolbar-sep"></div>
 
-					</div>
-
-					<div class="commbar">
-
-					</div>
-
-					<div class="scrollbar">
+					<div class="toolbar-group">
 
 					</div>
 				</div>
 
-				<div class="comments">
+				<div class="alternator">
+					<div class="timeline">
+						<div class="ruler">
+							<div class="ruler-minute">1</div>
+							<div class="ruler-minute">2</div>
+							<div class="ruler-minute">3</div>
+							<div class="ruler-minute">4</div>
+							<div class="ruler-minute">5</div>
+							<div class="ruler-minute">6</div>
+							<div class="ruler-minute">7</div>
+							<div class="ruler-minute">8</div>
+							<div class="ruler-minute">9</div>
+							<div class="ruler-minute">10</div>
+							<div class="ruler-minute">11</div>
+							<div class="ruler-minute">12</div>
+						</div>
 
+						<div class="tracks">
+							<div class="track">
+								<div class="file file-1">
+									<span class="file-name">eye-tracker</span>
+									<span class="file-classification unlocked"></span>
+								</div>
+							</div>
+
+							<div class="track">
+								<div class="file file-2">
+									<span class="file-name">eye-cam</span>
+									<span class="file-classification unlocked"></span>
+								</div>
+							</div>
+
+							<div class="track">
+								<div class="file file-3">
+									<span class="file-name">video</span>
+									<span class="file-classification locked"></span>
+								</div>
+							</div>
+
+							<div class="track">
+								<div class="file file-4">
+									<span class="file-name">video</span>
+									<span class="file-classification unlocked"></span>
+								</div>
+							</div>
+
+							<div class="track">
+								<div class="file file-5">
+									<span class="file-name">audio</span>
+									<span class="file-classification locked"></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="commbar">
+
+						</div>
+
+						<div class="scrollbar">
+
+						</div>
+					</div>
+
+					<div class="comments">
+
+					</div>
 				</div>
 			</section>
 		</article>
