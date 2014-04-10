@@ -4,8 +4,10 @@
 		<title>Timeline/Player Prototype</title>
 		<link rel="stylesheet" href="normalize.css">
 		<link rel="stylesheet" href="typicons.min.css">
+		<link rel="stylesheet" href="jquery.qtip.min.css">
 		<link rel="stylesheet" href="styles.css">
 		<script src="jquery-2.1.0.min.js"></script>
+		<script src="jquery.qtip.min.js"></script>
 		<script src="scripts.js"></script>
 	</head>
 
@@ -16,7 +18,7 @@
 					<label># of videos</label>
 					<button class="set-player" data-toggle="#player-view-1">1</button>
 					<button class="set-player" data-toggle="#player-view-2">2</button>
-					<button class="set-player" data-toggle="#player-view-3">3</button>
+					<button class="set-player" data-toggle="#player-view-3">4</button>
 					<button class="set-player" data-toggle="#player-view-4">4</button>
 				</div>
 
@@ -124,6 +126,10 @@
 
 				<div class="alternator">
 					<div class="timeline">
+						<div class="cursor play"></div>
+						<div class="cursor tool"></div>
+						<div class="selection"></div>
+
 						<div class="ruler">
 							<div class="ruler-minute">1</div>
 							<div class="ruler-minute">2</div>
@@ -140,48 +146,126 @@
 						</div>
 
 						<div class="tracks">
-							<div class="track">
+							<div id="track-1" class="track track-temporal">
 								<div class="file file-1">
 									<span class="file-name">eye-tracker</span>
-									<span class="file-classification unlocked"></span>
+									<span class="file-classification unlocked typcn typcn-lock-open"></span>
 								</div>
 							</div>
 
-							<div class="track">
+							<div id="track-2" class="track track-temporal hidden">
 								<div class="file file-2">
 									<span class="file-name">eye-cam</span>
-									<span class="file-classification unlocked"></span>
+									<span class="file-classification unlocked typcn typcn-lock-open"></span>
 								</div>
 							</div>
 
-							<div class="track">
+							<div id="track-3" class="track track-temporal hidden">
 								<div class="file file-3">
 									<span class="file-name">video</span>
-									<span class="file-classification locked"></span>
+									<span class="file-classification locked typcn typcn-lock-closed"></span>
 								</div>
 							</div>
 
-							<div class="track">
+							<div id="track-4" class="track track-temporal hidden">
 								<div class="file file-4">
 									<span class="file-name">video</span>
-									<span class="file-classification unlocked"></span>
+									<span class="file-classification unlocked typcn typcn-lock-open"></span>
 								</div>
 							</div>
 
-							<div class="track">
+							<div class="track track-audio">
 								<div class="file file-5">
 									<span class="file-name">audio</span>
-									<span class="file-classification locked"></span>
+									<span class="file-classification locked typcn typcn-lock-closed"></span>
+								</div>
+							</div>
+
+							<div class="track track-instant">
+								<div class="file file-6">
+									<span class="file-name">intake-form<span class="file-classification locked typcn typcn-lock-closed"></span></span>
+
+								</div>
+
+								<div class="file file-7">
+									<span class="file-name">questionaire<span class="file-classification unlocked typcn typcn-lock-open"></span></span>
+
+								</div>
+
+								<div class="file file-8">
+									<span class="file-name">drawing<span class="file-classification unlocked typcn typcn-lock-open"></span></span>
+
 								</div>
 							</div>
 						</div>
 
-						<div class="commbar">
+						<div class="commbar cf">
+							<div class="comment comment-1">
+								<img src="http://lorempixel.com/50/50?q=r">
+								<img src="http://lorempixel.com/50/50?q=d">
+								<img src="http://lorempixel.com/50/50?q=l">
+								<img src="http://lorempixel.com/50/50?q=u">
+								<span class="comment-more">33</span>
+							</div>
 
+							<div class="comment comment-2">
+								<img src="http://lorempixel.com/50/50?q=a">
+								<img src="http://lorempixel.com/50/50?q=s">
+								<img src="http://lorempixel.com/50/50?q=u">
+								<span class="comment-more">11</span>
+							</div>
+
+							<div class="comment comment-3">
+								<img src="http://lorempixel.com/50/50?q=c">
+								<img src="http://lorempixel.com/50/50?q=u">
+								<span class="comment-more">5</span>
+							</div>
+
+							<div class="comment comment-6">
+								<img src="http://lorempixel.com/50/50?q=r">
+								<img src="http://lorempixel.com/50/50?q=s">
+								<img src="http://lorempixel.com/50/50?q=z">
+								<img src="http://lorempixel.com/50/50?q=g">
+								<img src="http://lorempixel.com/50/50?q=u">
+								<span class="comment-more">9</span>
+							</div>
+
+							<div class="comment comment-7">
+								<img src="http://lorempixel.com/50/50?q=u">
+							</div>
+
+							<div class="comment comment-4 comment-upper">
+								<img src="http://lorempixel.com/50/50?q=r">
+								<img src="http://lorempixel.com/50/50?q=p">
+								<img src="http://lorempixel.com/50/50?q=t">
+								<img src="http://lorempixel.com/50/50?q=u">
+								<img src="http://lorempixel.com/50/50?q=h">
+								<img src="http://lorempixel.com/50/50?q=i">
+								<span class="comment-more">52</span>
+							</div>
+
+							<div class="comment comment-5 comment-upper">
+								<img src="http://lorempixel.com/50/50?q=r">
+								<img src="http://lorempixel.com/50/50?q=f">
+								<img src="http://lorempixel.com/50/50?q=u">
+								<span class="comment-more">6</span>
+							</div>
+
+							<div class="comment comment-8 comment-upper">
+								<img src="http://lorempixel.com/50/50?q=r">
+								<img src="http://lorempixel.com/50/50?q=s">
+								<img src="http://lorempixel.com/50/50?q=s">
+								<img src="http://lorempixel.com/50/50?q=t">
+								<span class="comment-more">7</span>
+							</div>
 						</div>
 
 						<div class="scrollbar">
-
+							<div class="scroller">
+								<div class="grip left"></div>
+								<div class="grip right"></div>
+								<div class="stretch"></div>
+							</div>
 						</div>
 					</div>
 
