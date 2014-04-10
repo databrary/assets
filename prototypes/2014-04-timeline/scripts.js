@@ -55,7 +55,8 @@ $(document).ready(function () {
 
 	q('.context', 'The <b>context menu</b> shows available actions based on your access level and whether you\'ve made a selection.');
 
-	q('', '');
+	q('.tags', 'How should the <b>tags region</b> display?');
+
 	q('', '');
 	q('', '');
 

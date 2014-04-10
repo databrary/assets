@@ -421,10 +421,30 @@ label {
 
 /*****************************************/
 
+.tags {
+	background-color: rgba(200, 200, 255, .25);
+	position: relative;
+	z-index: 4;
+	padding:30px;
+}
+
+.tags .question {
+	text-align: center;
+	font-size: 2em;
+}
+
+.tags .question span {
+	background-color: yellow;
+	padding: 5px;
+}
+
+/*****************************************/
+
 .commbar {
 	background-color: rgba(255, 255, 200, .5);
 	position: relative;
 	z-index: 5;
+	box-shadow: 0 0 2px #666;
 }
 
 .comment {
